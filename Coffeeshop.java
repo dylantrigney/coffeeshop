@@ -13,17 +13,17 @@ public class Coffeeshop {
         System.out.println("whats your balance?");
         String balanceInput = sc.nextLine();
         double balance = Double.parseDouble(balanceInput);
-        System.out.println("what type of coffee do you want?");
+        System.out.println("what type of coffee do you want? Enter espresso or latte.");
         String coffeeInput = sc.nextLine();
         System.out.println("how many do you want?");
         int amountInput = Integer.parseInt(sc.nextLine());
         double espressoPrice = 3.99;
-        double americanoPrice = 2.99;
+        double lattePrice = 2.99;
 
         if(amountInput > 0 ){
-            // proceed with coffee purchase attempt?
+            // proceed with coffee purchase attempt
             boolean isEspresso = coffeeInput.equalsIgnoreCase("espresso");
-            boolean isAmericano = coffeeInput.equalsIgnoreCase("americano");
+            boolean isAmericano = coffeeInput.equalsIgnoreCase("latte");
             if(isEspresso && (balance >= (espressoPrice * amountInput))){
                 // print out a successful espresso purchase message
                 System.out.println("enjoy your espresso");
@@ -40,23 +40,3 @@ public class Coffeeshop {
     }
 }
 }
-/*
- * recommendations - 
- * print the amount of change
- * picking multiple types of coffee
- * maintaining a balance outside of the while loop
- */
-/*
- * if(isEspresso ){
-                if(balance >= (espressoPrice * amountInput)){
-                    // print out a successful espresso purchase message
-                System.out.println("enjoy your espresso");
-                }
-            }
-            if(isAmericano ){
-                if(balance >= (americanoPrice * amountInput)){
-
-                System.out.println("enjoy your americano");
-                }
-            }
- */
